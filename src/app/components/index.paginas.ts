@@ -7,6 +7,7 @@ export { FruitfooterComponent } from "./fruitfooter/fruitfooter.component";
 export { FruittopbarComponent } from "./fruittopbar/fruittopbar.component";
 export { FruitcartComponent } from "./fruitcart/fruitcart.component";*/
 export { PagoComponent } from "./pago/pago.component";
+export { CheckoutComponent } from "./checkout/checkout.component";
 export { PrincipalComponent, } from "./principal/principal.component";
 export { ShadibannerComponent, } from "./shadibanner/shadibanner.component";
 export { ShadibestsellerComponent } from "./shadibestseller/shadibestseller.component";

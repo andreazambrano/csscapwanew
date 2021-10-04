@@ -9,6 +9,7 @@ import {
 	FruittopbarComponent,
 	FruitcartComponent,*/
 	PagoComponent,
+	CheckoutComponent,
 	PrincipalComponent,
 	ShadibannerComponent,
 	ShadibestsellerComponent,
@@ -33,6 +34,7 @@ const app_routes: Routes = [
 	{path:'shadislider',component:ShadisliderComponent},
 	{path:'shaditop',component:ShaditopComponent},
 	{path:'shadishop',component:ShadishopComponent},
+	{path:'checkout',component:CheckoutComponent},
 /*	{path:'fruittopbar',component:FruittopbarComponent},
 	{path:'fruitproducts',component:FruitproductsComponent},
 	{path:'fruitbanner',component:FruitbannerComponent},
