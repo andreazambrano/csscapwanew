@@ -25,7 +25,7 @@ export class CheckoutComponent implements OnInit {
     public _uw:UserWService,
     private dataApi: DataApiService,
     private location: Location,
-    private router: Router,
+    public router: Router,
     private formBuilder: FormBuilder
     ) { }
 
