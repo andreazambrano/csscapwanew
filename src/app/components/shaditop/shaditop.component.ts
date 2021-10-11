@@ -18,8 +18,8 @@ export class ShaditopComponent implements OnInit {
   constructor(
   private dataApi: DataApiService,
     private location: Location,
-    private route:ActivatedRoute,
-    private router: Router, 
+    public route:ActivatedRoute,
+    public router: Router, 
     public _uw:UserWService
     ) { }
 
