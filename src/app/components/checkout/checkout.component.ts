@@ -123,4 +123,9 @@ public setMetodo(){
     
   
     }
+
+
+     get fval() {
+      return this.ngFormSendOrder.controls;
+    }
 }
