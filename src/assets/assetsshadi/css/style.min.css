@@ -6876,7 +6876,7 @@ offcanvas-menu>ul>li .menu-expand {
 
 @media only screen and (max-width: 767px) {
     .product-details-content .pro-details-quality .pro-details-cart a {
-        padding:0 20px;
+        padding:0 40px;
         font-size: 14px
     }
 }
