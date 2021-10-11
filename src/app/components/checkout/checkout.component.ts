@@ -9,6 +9,7 @@ import { OrderInterface } from '../../models/order-interface';
 import { FormBuilder, FormGroup,  Validators } from '@angular/forms';
 import { ScrollTopService }  from '../../services/scroll-top.service';
 import { isError } from "util";
+import { ActivatedRoute, Params} from '@angular/router';
 
 
 @Component({
@@ -20,6 +21,7 @@ export class CheckoutComponent implements OnInit {
 
   constructor(
     public scrollTopService:ScrollTopService,
+    private route:ActivatedRoute,
     public _uw:UserWService,
     private dataApi: DataApiService,
     private location: Location,
@@ -37,6 +39,7 @@ export class CheckoutComponent implements OnInit {
       personaContacto:"",
       total:0
     };
+    
     public order : OrderInterface ={
       car:[],
       email:"",
@@ -57,6 +60,7 @@ recargo=0;
     ngFormSendSale: FormGroup;
     ngFormSendOrder: FormGroup;
     submitted = false;
+    okOrder(){};
 public setMetodo(){
       if(this.ngFormSendOrder.value.metodo=="bsTansferencia"){
            this.recargo=0;
