@@ -1,5 +1,5 @@
         <!-- Modal -->
-        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog">
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" *ngIf="this._uw.tixPreview.images[0]!=undefined">
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -11,10 +11,10 @@
                                 <div class="quickview-wrapper">
                                      <!-- slider -->
                                       <div class="gallery-top">
-                                          <div class="single-slide"> 
-                                                <img class="img-responsive m-auto" src="assets/assetsshadi/images/product-image/4.jpg" alt="">
+                                          <div class="single-slide"  *ngIf="this._uw.tixPreview.images[0]!=undefined"> 
+                                                <img class="img-responsive m-auto" src="{{this._uw.tixPreview.images[0]}}" alt="" *ngIf="this._uw.tixPreview.images[0]!=undefined">
                                           </div>
-                                          <div class="single-slide"> 
+                                         <!--  <div class="single-slide"> 
                                                 <img class="img-responsive m-auto" src="assets/assetsshadi/images/product-image/3.jpg" alt="">
                                           </div>
                                           <div class="single-slide"> 
@@ -25,9 +25,9 @@
                                           </div>
                                           <div class="single-slide"> 
                                                 <img class="img-responsive m-auto" src="assets/assetsshadi/images/product-image/3.jpg" alt="">
-                                          </div>
+                                          </div> -->
                                       </div>
-                                      <div class=" gallery-thumbs">
+                              <!--         <div class=" gallery-thumbs">
                                           <div class="single-slide"> 
                                                 <img class="img-responsive m-auto" src="assets/assetsshadi/images/product-image/1.jpg" alt="">
                                           </div>
@@ -43,13 +43,13 @@
                                           <div class="single-slide"> 
                                                 <img class="img-responsive m-auto" src="assets/assetsshadi/images/product-image/4.jpg" alt="">
                                           </div>
-                                      </div>
+                                      </div> -->
                                 </div>
                             </div>
                             <div class="col-md-6 col-sm-12 col-xs-12">
                                 <div class="product-details-content quickview-content">
-                                    <h2>Originals Kaval Windbr</h2>
-                                    <p class="reference">Ref.:<span> OKW</span></p>
+                                    <h2 *ngIf="this._uw.tixPreview!='undefined'">{{_uw.tixPreview.name}}</h2>
+                                    <p class="reference">Modelo:<span> {{_uw.tixPreview.model}} </span> Marca:<span> {{_uw.tixPreview.brand}}</span> </p>
                                     <div class="pro-details-rating-wrap">
                                         <div class="rating-product">
                                             <i class="ion-android-star"></i>
@@ -58,14 +58,14 @@
                                             <i class="ion-android-star"></i>
                                             <i class="ion-android-star"></i>
                                         </div>
-                                        <span class="read-review"><a class="reviews" href="index.html#">Leer opiniones (1)</a></span>
+                                        <span class="read-review"><a class="reviews" href="index.html#">Leer opiniones (0)</a></span>
                                     </div>
                                     <div class="pricing-meta">
                                         <ul>
-                                            <li class="old-price not-cut">$18.90</li>
+                                            <li class="price not-cut">${{_uw.tixPreview.price}} x {{_uw.tixPreview.quantity}} = ${{_uw.tixPreview.quantity*_uw.tixPreview.price}} </li>
                                         </ul>
                                     </div>
-                                    <p class="quickview-para">Lorem ipsum dolor sit amet, consectetur adipisic elit eiusm tempor incidid ut labore et dolore magna aliqua. Ut enim ad minim venialo quis nostrud exercitation ullamco</p>
+                                 <!--    <p class="quickview-para">Lorem ipsum dolor sit amet, consectetur adipisic elit eiusm tempor incidid ut labore et dolore magna aliqua. Ut enim ad minim venialo quis nostrud exercitation ullamco</p> -->
                                    <!--  <div class="pro-details-size-color">
                                         <div class="pro-details-color-wrap">
                                             <span>Color</span>
@@ -78,19 +78,24 @@
                                         </div>
                                     </div> -->
                                     <div class="pro-details-quality">
-                                        <div class="cart-plus-minus">
+                                     <!--    <div class="cart-plus-minus">
                                             <input class="cart-plus-minus-box" type="text" name="qtybutton" value="1" />
+                                        </div> -->
+                                        <input type="button" value="-" (click)="minus()" class="minus">
+                                            <input [(ngModel)]="_uw.tixPreview.quantity"  size="1"  [ngModelOptions]="{standalone: true}" disabled="disabled"  >
+                                            <input type="button" value="+" (click)="plus()" class="plus">
+                                         <div class="pro-details-cart btn-hover">
+                                            <a (click)="cartCalculate()" style="cursor:pointer;"  data-dismiss="modal" > + al carro</a>
                                         </div>
-                                       
                                     </div>
                                      <div class="pro-details-quality">
-                                     
+                                     <!-- 
                                         <div class="pro-details-cart2 btn-hover" >
                                             <a href="index.html#"> Comprar</a>
-                                        </div>
-                                         <div class="pro-details-cart btn-hover">
-                                            <a href="index.html#"> + al carro</a>
-                                        </div>
+                                        </div> -->
+                                        <!--  <div class="pro-details-cart btn-hover">
+                                            <a (click)="cartCalculate()" style="cursor:pointer;"  data-dismiss="modal" > + al carro</a>
+                                        </div> -->
                                     </div>
                                    <!--  <div class="pro-details-wish-com">
                                         <div class="pro-details-wishlist">
@@ -100,25 +105,7 @@
                                             <a href="compare.html"><i class="ion-ios-shuffle-strong"></i>Add to compare</a>
                                         </div>
                                     </div> -->
-                                    <div class="pro-details-social-info">
-                                        <span>Compartir</span>
-                                        <div class="social-info">
-                                            <ul>
-                                                <li>
-                                                    <a href="index.html#"><i class="ion-social-facebook"></i></a>
-                                                </li>
-                                                <li>
-                                                    <a href="index.html#"><i class="ion-social-twitter"></i></a>
-                                                </li>
-                                               <!--  <li>
-                                                    <a href="index.html#"><i class="ion-social-google"></i></a>
-                                                </li> -->
-                                                <li>
-                                                    <a href="index.html#"><i class="ion-social-instagram"></i></a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
+                                   
                                 </div>
                             </div>
                         </div>

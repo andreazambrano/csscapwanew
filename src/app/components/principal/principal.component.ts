@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { UserWService } from "../../services/user-w.service";
 
 @Component({
   selector: 'app-principal',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PrincipalComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    public _uw:UserWService
+    ) { }
 
   ngOnInit() {
+
+
   }
 
 }

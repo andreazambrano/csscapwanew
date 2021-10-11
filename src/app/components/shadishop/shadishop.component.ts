@@ -36,7 +36,10 @@ getAllTixs(){
         }
      });  
     }
-
+tixCharge(tix){
+  this._uw.tixPreview = tix;
+  this._uw.tixPreview.quantity = 1;
+}
 
   ngOnInit() {
           this.getAllTixs();

@@ -40,6 +40,7 @@ getAllCategories(){
     }
 
   ngOnInit() {
+    this._uw.numProd=0;
     this.getAllCategories();
   }
 

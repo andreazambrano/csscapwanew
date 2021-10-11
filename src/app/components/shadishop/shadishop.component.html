@@ -55,12 +55,13 @@
                             <!-- Tab One Start -->
                             <div id="shop-1" class="tab-pane ">
                                 <div class="row m-0">
-                                    <div class="mb-30px col-md-4 col-sm-6  p-0" *ngFor="let tix of tixs" >
+                                    <div class="mb-30px col-md-4 col-sm-6  p-0" *ngFor="let tix of tixs" data-link-action="quickview" data-toggle="modal" data-target="#exampleModal" (click)="tixCharge(tix)">
+
                                         <div class="slider-single-item">
                                               <article class="list-product p-0 ">
                                                 <div class="product-inner">
                                                     <div class="img-block">
-                                                        <a routerLink="shadiproduct" class="thumbnail">
+                                                        <a  class="thumbnail">
                                                             <img class="first-img" src="{{tix.images[0]}}" alt="" />
                                                             <img class="second-img" src="{{tix.images[1]}}" *ngIf="tix.images[1]!=undefined" alt="" />
                                                         </a>
@@ -69,7 +70,7 @@
                                                             <ul>
                                                               
                                                                 <li>
-                                                                    <a class="quick_view" routerLink="shadiproduct" data-link-action="quickview" title="Quick view" data-toggle="modal" data-target="#exampleModal">
+                                                                    <a class="quick_view"  data-link-action="quickview" title="Quick view" data-toggle="modal" data-target="#exampleModal">
                                                                         <i class="icon-eye"></i>
                                                                     </a>
                                                                 </li>
@@ -104,14 +105,14 @@
                                     </div>
                                 </div>
                             </div>
-                            <div id="shop-2" class="tab-pane active">
+                            <div id="shop-2" class="tab-pane active" >
                                 <div class="row m-0">
-                                    <div class="mb-30px col-md-3 col-sm-6  p-0" *ngFor="let tix of tixs" >
+                                    <div class="mb-30px col-md-3 col-sm-6  p-0" *ngFor="let tix of tixs" data-link-action="quickview" data-toggle="modal" data-target="#exampleModal" (click)="tixCharge(tix)">
                                         <div class="slider-single-item">
                                               <article class="list-product p-0 ">
                                                 <div class="product-inner">
                                                     <div class="img-block">
-                                                        <a routerLink="shadiproduct" class="thumbnail">
+                                                        <a  class="thumbnail">
                                                             <img class="first-img" src="{{tix.images[0]}}" alt="" />
                                                             <img class="second-img" src="{{tix.images[1]}}" *ngIf="tix.images[1]!=undefined" alt="" />
                                                         </a>
@@ -120,7 +121,7 @@
                                                             <ul>
                                                               
                                                                 <li>
-                                                                    <a class="quick_view" routerLink="shadiproduct" data-link-action="quickview" title="Quick view" data-toggle="modal" data-target="#exampleModal">
+                                                                    <a class="quick_view"  data-link-action="quickview" title="Quick view" data-toggle="modal" data-target="#exampleModal">
                                                                         <i class="icon-eye"></i>
                                                                     </a>
                                                                 </li>
@@ -155,11 +156,11 @@
                                     </div>
                                 </div>
                             </div>
-                            <div id="shop-3" class="tab-pane ">
+                            <div id="shop-3" class="tab-pane" >
                                 <div class="shop-list-wrap scroll-zoom">
                                     <div class="slider-single-item">
                                         <div class="row list-product m-0px">
-                                            <div class="col-md-12 padding-0px product-inner"  *ngFor="let tix of tixs">
+                                            <div class="col-md-12 padding-0px product-inner"  *ngFor="let tix of tixs" data-link-action="quickview" data-toggle="modal" data-target="#exampleModal" (click)="tixCharge(tix)" >
                                                   <div class="row">
                                                     <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 p-0">
                                                         <div class="left-img">

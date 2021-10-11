@@ -37,6 +37,7 @@ export class UserWService {
 	idCard:string;
 	imagePreviewProduct:string;
 	images:any[]=[];
+	imagesPreview:any[]=[];
 	info:any={};
 	isLogged:boolean=false;
 	loaded:boolean=false;
@@ -57,6 +58,7 @@ export class UserWService {
 	subTotal:number=0;
 	tixs:any[]=[];
 	tixPreview:any={};
+	//tixPreview:any[]=[];
 	tixsOrigin:any[]=[];
 	tixsDiscount:any={};
 	tixsNew:any={};
