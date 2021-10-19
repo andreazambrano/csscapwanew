@@ -10,17 +10,17 @@
                             <div class="box-style">
                                 <div class="">
                                      <owl-carousel-o [options]="customOptions">
-                                         <ng-template carouselSlide *ngFor="let tix of tixs" class="slider-single-item">
-                                            <article class="list-product text-left">
+                                         <ng-template carouselSlide *ngFor="let tix of tixs" class="slider-single-item" >
+                                            <article class="list-product text-left"  data-link-action="quickview" data-toggle="modal" data-target="#exampleModal" (click)="viewProduct(tix)">
                                                 <div class="product-inner">
                                                     <div class="img-block">
-                                                    <a href="#" class="thumbnail">
+                                                    <a  class="thumbnail">
                                                         <img class="first-img" src="{{tix.images[0]}}" alt="" />
                                                         <img class="second-img" src="{{tix.images[1]}}" alt="" />
                                                     </a>
                                                     </div>
                                                     <div class="product-decs">
-                                                        <h2><a href="#" class="product-link">{{tix.name}}</a></h2>
+                                                        <h2><a  class="product-link">{{tix.name}}</a></h2>
                                                         <div class="rating-product">
                                                             <i class="ion-android-star"></i>
                                                             <i class="ion-android-star"></i>
@@ -54,16 +54,16 @@
                             </div>
                             <div class="best-sell-slider-wrapper bg-white slider-nav-style-1">
                                 <div class="best-sell-slider-item">
-                                    <article class="list-product text-left" *ngFor="let tix of tixs" >
+                                    <article class="list-product text-left" *ngFor="let tix of tixs"  data-link-action="quickview" data-toggle="modal" data-target="#exampleModal" (click)="viewProduct(tix)">
                                         <div class="product-inner">
                                             <div class="img-block">
-                                                <a href="#" class="thumbnail">
+                                                <a  class="thumbnail">
                                                     <img class="first-img" src="{{tix.images[0]}}" alt="" />
                                                     <img class="second-img" src="{{tix.images[1]}}" alt="" />
                                                 </a>
                                             </div>
                                             <div class="product-decs">
-                                                <h2><a href="#" class="product-link">{{tix.name}}</a></h2>
+                                                <h2><a  class="product-link">{{tix.name}}</a></h2>
                                                 <div class="rating-product">
                                                     <i class="ion-android-star"></i>
                                                     <i class="ion-android-star"></i>
@@ -82,16 +82,16 @@
                                  
                                 </div>
                                 <div class="best-sell-slider-item">
-                                    <article class="list-product text-left" *ngFor="let tix of tixs">
+                                    <article class="list-product text-left" *ngFor="let tix of tixs"  data-link-action="quickview" data-toggle="modal" data-target="#exampleModal" (click)="viewProduct(tix)">
                                         <div class="product-inner">
                                             <div class="img-block">
-                                                <a href="#" class="thumbnail">
+                                                <a  class="thumbnail">
                                                     <img class="first-img" src="{{tix.images[0]}}" alt="" />
                                                     <img class="second-img" src="{{tix.images[1]}}" alt="" />
                                                 </a>
                                             </div>
                                             <div class="product-decs">
-                                                <h2><a href="#" class="product-link">{{tix.name}}</a></h2>
+                                                <h2><a  class="product-link">{{tix.name}}</a></h2>
                                                 <div class="rating-product">
                                                     <i class="ion-android-star color-gray"></i>
                                                     <i class="ion-android-star color-gray"></i>
@@ -114,13 +114,13 @@
                                     <article class="list-product text-left">
                                         <div class="product-inner">
                                             <div class="img-block">
-                                                <a href="#" class="thumbnail">
+                                                <a  class="thumbnail">
                                                     <img class="first-img" src="assets/assetsshadi/images/product-image/6.jpg" alt="" />
                                                     <img class="second-img" src="assets/assetsshadi/images/product-image/7.jpg" alt="" />
                                                 </a>
                                             </div>
                                             <div class="product-decs">
-                                                <h2><a href="#" class="product-link">Nokia Steel HR Hybrid  Smartwatch</a></h2>
+                                                <h2><a  class="product-link">Nokia Steel HR Hybrid  Smartwatch</a></h2>
                                                 <div class="rating-product">
                                                     <i class="ion-android-star"></i>
                                                     <i class="ion-android-star"></i>
@@ -139,13 +139,13 @@
                                     <article class="list-product text-left">
                                         <div class="product-inner">
                                             <div class="img-block">
-                                                <a href="#" class="thumbnail">
+                                                <a  class="thumbnail">
                                                     <img class="first-img" src="assets/assetsshadi/images/product-image/4.jpg" alt="" />
                                                     <img class="second-img" src="assets/assetsshadi/images/product-image/3.jpg" alt="" />
                                                 </a>
                                             </div>
                                             <div class="product-decs">
-                                                <h2><a href="#" class="product-link">Bose SoundLink Micro  Bluetooth Speaker 2</a></h2>
+                                                <h2><a  class="product-link">Bose SoundLink Micro  Bluetooth Speaker 2</a></h2>
                                                 <div class="rating-product">
                                                     <i class="ion-android-star"></i>
                                                     <i class="ion-android-star"></i>
@@ -164,13 +164,13 @@
                                     <article class="list-product text-left">
                                         <div class="product-inner">
                                             <div class="img-block">
-                                                <a href="#" class="thumbnail">
+                                                <a  class="thumbnail">
                                                     <img class="first-img" src="assets/assetsshadi/images/product-image/18.jpg" alt="" />
                                                     <img class="second-img" src="assets/assetsshadi/images/product-image/17.jpg" alt="" />
                                                 </a>
                                             </div>
                                             <div class="product-decs">
-                                                <h2><a href="#" class="product-link">Beats Solo3 Wireless  On-Ear Headphones</a></h2>
+                                                <h2><a  class="product-link">Beats Solo3 Wireless  On-Ear Headphones</a></h2>
                                                 <div class="rating-product">
                                                     <i class="ion-android-star"></i>
                                                     <i class="ion-android-star"></i>
@@ -189,13 +189,13 @@
                                     <article class="list-product text-left">
                                         <div class="product-inner">
                                             <div class="img-block">
-                                                <a href="#" class="thumbnail">
+                                                <a  class="thumbnail">
                                                     <img class="first-img" src="assets/assetsshadi/images/product-image/2.jpg" alt="" />
                                                     <img class="second-img" src="assets/assetsshadi/images/product-image/3.jpg" alt="" />
                                                 </a>
                                             </div>
                                             <div class="product-decs">
-                                                <h2><a href="#" class="product-link">Kodak PIXPRO Astro  Zoom AZ421 16 MP 2</a></h2>
+                                                <h2><a  class="product-link">Kodak PIXPRO Astro  Zoom AZ421 16 MP 2</a></h2>
                                                 <div class="rating-product">
                                                     <i class="ion-android-star"></i>
                                                     <i class="ion-android-star"></i>

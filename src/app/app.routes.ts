@@ -33,7 +33,7 @@ const app_routes: Routes = [
 	{path:'shadimostwanted',component:ShadimostwantedComponent},
 	{path:'shadislider',component:ShadisliderComponent},
 	{path:'shaditop',component:ShaditopComponent},
-	{path:'shadishop',component:ShadishopComponent},
+	{path:'shop',component:ShadishopComponent},
 	{path:'checkout',component:CheckoutComponent},
 /*	{path:'fruittopbar',component:FruittopbarComponent},
 	{path:'fruitproducts',component:FruitproductsComponent},
