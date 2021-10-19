@@ -18,3 +18,4 @@ export { ShadisliderComponent } from "./shadislider/shadislider.component";
 export { ShaditopComponent } from "./shaditop/shaditop.component";
 export { ShadishopComponent } from "./shadishop/shadishop.component";
 export { CartComponent } from "./cart/cart.component";
+export { ContactComponent } from "./contact/contact.component";

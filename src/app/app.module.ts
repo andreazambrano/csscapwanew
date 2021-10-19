@@ -63,6 +63,7 @@ import { ShadicartComponent } from './components/shadicart/shadicart.component';
 import { ShadishopComponent } from './components/shadishop/shadishop.component';
 import { CheckoutComponent } from './components/checkout/checkout.component';
 import { CartComponent } from './components/cart/cart.component';
+import { ContactComponent } from './components/contact/contact.component';
 
 @NgModule({
   declarations: [
@@ -91,6 +92,7 @@ import { CartComponent } from './components/cart/cart.component';
     ShadishopComponent,
     CheckoutComponent,
     CartComponent,
+    ContactComponent,
   ],
   imports: [
     BrowserModule,

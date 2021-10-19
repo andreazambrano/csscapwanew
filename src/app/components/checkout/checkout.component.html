@@ -1,4 +1,4 @@
- <div class="checkout-area mb-60px" style="    padding-top: 60px;">
+ <div class="checkout-area mb-60px" style="    padding-top: 60px;background: white;">
         <div class="container">
         <div class="container-inner">
                  <form [formGroup]="ngFormSendSale" (ngSubmit) ="okOrder()" >
@@ -73,8 +73,8 @@
                                     </div>
                                     <div class="your-order-middle">
                                         <ul>
-                                            <li><span class="order-middle-left">Product Name X 1</span> <span class="order-price">$329 </span></li>
-                                            <li><span class="order-middle-left">Product Name X 1</span> <span class="order-price">$329 </span></li>
+                                            <li *ngFor="let item of _uw.car"><span class="order-middle-left">{{item.name}} X {{item.quantity}}</span> <span class="order-price">${{item.quantity*item.price}} </span></li>
+                                          
                                         </ul>
                                     </div>
                                     <div class="your-order-bottom">
@@ -86,7 +86,7 @@
                                     <div class="your-order-total">
                                         <ul>
                                             <li class="order-total">Total</li>
-                                            <li>$329</li>
+                                            <li>${{_uw.total}}</li>
                                         </ul>
                                     </div>
                                 </div>
@@ -155,7 +155,7 @@
                         </div>
                             </div>
                             <div class="Place-order mt-25">
-                                <a class="btn-hover" routerLink="pago">Realizar pedido</a>
+                                <a class="btn-hover" routerLink="pago" style="background-color: #fbd904;color: black;">Realizar pedido</a>
                             </div>
                         </div>
                     </div>

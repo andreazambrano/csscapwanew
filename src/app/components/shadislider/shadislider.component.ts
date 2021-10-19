@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { UserWService } from "../../services/user-w.service";
- declare var $: any;
+ //declare var $: any;
 @Component({
   selector: 'app-shadislider',
   templateUrl: './shadislider.component.html',
@@ -14,7 +14,7 @@ export class ShadisliderComponent implements OnInit {
   loadAPI = null; 
       url="assets/assetsshadi/js/vendor/vendor.min.js";
    url2 = "assets/assetsshadi/js/plugins/plugins.min.js"; 
-   url3 = "assets/assetsshadi/js/main.js"; 
+   url3 = "assets/assetsshadi/js/main2.js"; 
   // url4 = "assets/assetsshadi/js/offset_overlay.js"; 
      public loadScript() {
       let node = document.createElement("script");
@@ -32,6 +32,8 @@ export class ShadisliderComponent implements OnInit {
       node.charset = "utf-8";
       document.getElementsByTagName("head")[0].appendChild(node);
     } 
+
+
      public loadScript3() {
       let node = document.createElement("script");
       node.src = this.url3;
@@ -39,6 +41,7 @@ export class ShadisliderComponent implements OnInit {
       node.async = true;
       node.charset = "utf-8";
       document.getElementsByTagName("head")[0].appendChild(node);
+
     }
     //  public loadScript4() {
     //   let node = document.createElement("script");
@@ -52,12 +55,13 @@ export class ShadisliderComponent implements OnInit {
   	 if (this._uw.loaded==true){
           this.loadAPI = new Promise(resolve => {
             this.loadScript();
-            this.loadScript2();
+             this.loadScript2();
             this.loadScript3();
            // this.loadScript4();
           });
         }
         this._uw.loaded=true;
+
   }
 
  
