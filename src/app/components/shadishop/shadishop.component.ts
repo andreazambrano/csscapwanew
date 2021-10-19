@@ -40,6 +40,21 @@ tixCharge(tix){
   this._uw.tixPreview = tix;
   this._uw.tixPreview.quantity = 1;
 }
+  public viewProduct(tix){
+    let id=tix.id;
+    let tixToView = tix;
+    this._uw.tixPreview=tixToView;
+    this._uw.tixPreview.quantity=1; 
+    this._uw.imagePreviewProduct=this._uw.tixPreview.images[0];
+    for (let i=0;i<this._uw.car.length;i++){
+      if(id==this._uw.car[i].id){
+        this._uw.tixPreview.quantity=this._uw.car[i].quantity;
+        this._uw.idToUpdate=i;
+        console.log("ya se encuentra en el carro!");
+      }
+    }
+    this.getAllTixs();
+  } 
 
   ngOnInit() {
           this.getAllTixs();

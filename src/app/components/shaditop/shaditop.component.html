@@ -124,7 +124,9 @@
                                  
                                     <div class="cart-info d-flex align-self-center">
                                    
-                                        <a title="cart" href="#offcanvas-cart" class="bag offcanvas-toggle" data-number=""><i class="icon-shopping-cart">{{_uw.numProd}}</i><span>$ {{_uw.total}}</span></a>
+                                        <a title="cart" href="#offcanvas-cart" class="bag offcanvas-toggle" data-number=""><i class="icon-shopping-cart"></i>
+                                               <span class="noti_count1 pull-bs-canvas-left blob" style="background: yellow;font-size: 14px; "  >{{_uw.numProd}}</span>
+                                            <span>$ {{_uw.total}}</span></a>
                                     </div>
                                 </div>
                             </div>
@@ -211,7 +213,7 @@
                     <div class="header-tools justify-content-end">
                         <div class="cart-info d-flex align-self-center">
                            <!--  <a title="wishlist" href="index.html#offcanvas-wishlist" class="heart offcanvas-toggle" data-number="3"><i class="icon-heart"></i></a> -->
-                            <a title="cart" href="#offcanvas-cart" class="bag offcanvas-toggle" data-number="3"><i class="icon-shopping-cart"></i><span>$30.00</span></a>
+                            <a title="cart" href="#offcanvas-cart" class="bag offcanvas-toggle" data-number="">{{_uw.numProd}}<i class="icon-shopping-cart"></i><span>${{_uw.total}}</span></a>
                         </div>
                     </div>
                 </div>

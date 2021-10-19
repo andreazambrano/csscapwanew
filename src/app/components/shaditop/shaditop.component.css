@@ -1,0 +1,18 @@
+.noti_count1 {
+    font-size: 15px;
+	font-weight: 600;
+    position: absolute;
+    top: -11px;
+    right: 11px;
+    background: yellow;
+    color: #fff;
+    width: 22px;
+    height: 22px;
+    text-align: center;
+    line-height: 1.5;
+    border-radius: 100%;
+}
+
+.night-mode .noti_count1 {
+    background: yellow;
+}

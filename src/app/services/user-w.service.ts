@@ -44,7 +44,10 @@ export class UserWService {
 	method:string;
 	moccs:boolean=false;
 	name:string;
+	carIds:any[]=[];
+	//carIds:any={};
 	numProd:number=0;
+	idToUpdate:number=0;
 	order:any={};
 	orderPro:any={};
 	pagoImage:any[]=[];

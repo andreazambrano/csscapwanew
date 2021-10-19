@@ -1,18 +1,18 @@
         <!-- Modal -->
-        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" *ngIf="this._uw.tixPreview.images[0]!=undefined">
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" >
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">x</span></button>
                     </div>
                     <div class="modal-body">
-                        <div class="row">
+                        <div class="row" >
                             <div class="col-md-6 col-sm-12 col-xs-12 mb-lm-100px mb-sm-30px">
                                 <div class="quickview-wrapper">
                                      <!-- slider -->
                                       <div class="gallery-top">
-                                          <div class="single-slide"  *ngIf="this._uw.tixPreview.images[0]!=undefined"> 
-                                                <img class="img-responsive m-auto" src="{{this._uw.tixPreview.images[0]}}" alt="" *ngIf="this._uw.tixPreview.images[0]!=undefined">
+                                          <div class="single-slide"  > 
+                                                <img class="img-responsive m-auto" src="{{_uw.imagePreviewProduct}}" alt="" >
                                           </div>
                                          <!--  <div class="single-slide"> 
                                                 <img class="img-responsive m-auto" src="assets/assetsshadi/images/product-image/3.jpg" alt="">
@@ -48,7 +48,7 @@
                             </div>
                             <div class="col-md-6 col-sm-12 col-xs-12">
                                 <div class="product-details-content quickview-content">
-                                    <h2 *ngIf="this._uw.tixPreview!='undefined'">{{_uw.tixPreview.name}}</h2>
+                                    <h2 *ngIf="_uw.tixPreview!='undefined'">{{_uw.tixPreview.name}}</h2>
                                     <p class="reference">Modelo:<span> {{_uw.tixPreview.model}} </span> Marca:<span> {{_uw.tixPreview.brand}}</span> </p>
                                     <div class="pro-details-rating-wrap">
                                         <div class="rating-product">
@@ -85,7 +85,7 @@
                                             <input [(ngModel)]="_uw.tixPreview.quantity"  size="1"  [ngModelOptions]="{standalone: true}" disabled="disabled"  >
                                             <input type="button" value="+" (click)="plus()" class="plus">
                                          <div class="pro-details-cart btn-hover">
-                                            <a (click)="cartCalculate()" style="cursor:pointer;"  data-dismiss="modal" > + al carro</a>
+                                            <a (click)="addToCar()" style="cursor:pointer;"  data-dismiss="modal" > + al carro</a>
                                         </div>
                                     </div>
                                      <div class="pro-details-quality">
