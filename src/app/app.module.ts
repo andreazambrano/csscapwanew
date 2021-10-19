@@ -62,6 +62,7 @@ import { ShadistaticComponent } from './components/shadistatic/shadistatic.compo
 import { ShadicartComponent } from './components/shadicart/shadicart.component';
 import { ShadishopComponent } from './components/shadishop/shadishop.component';
 import { CheckoutComponent } from './components/checkout/checkout.component';
+import { CartComponent } from './components/cart/cart.component';
 
 @NgModule({
   declarations: [
@@ -89,6 +90,7 @@ import { CheckoutComponent } from './components/checkout/checkout.component';
     ShadicartComponent,
     ShadishopComponent,
     CheckoutComponent,
+    CartComponent,
   ],
   imports: [
     BrowserModule,
