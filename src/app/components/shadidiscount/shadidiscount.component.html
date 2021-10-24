@@ -10,7 +10,7 @@
                             <div class="box-style">
                                 <div class="">
                                      <owl-carousel-o [options]="customOptions">
-                                         <ng-template carouselSlide *ngFor="let tix of tixs" class="slider-single-item" >
+                                         <ng-template carouselSlide *ngFor="let tix of tixsDiscount" class="slider-single-item" >
                                             <article class="list-product text-left"  data-link-action="quickview" data-toggle="modal" data-target="#exampleModal" (click)="viewProduct(tix)">
                                                 <div class="product-inner">
                                                     <div class="img-block">
@@ -54,7 +54,7 @@
                             </div>
                             <div class="best-sell-slider-wrapper bg-white slider-nav-style-1">
                                 <div class="best-sell-slider-item">
-                                    <article class="list-product text-left" *ngFor="let tix of tixs"  data-link-action="quickview" data-toggle="modal" data-target="#exampleModal" (click)="viewProduct(tix)">
+                                    <article class="list-product text-left" *ngFor="let tix of tixsBestseller"  data-link-action="quickview" data-toggle="modal" data-target="#exampleModal" (click)="viewProduct(tix)">
                                         <div class="product-inner">
                                             <div class="img-block">
                                                 <a  class="thumbnail">
@@ -81,8 +81,8 @@
                                     </article>
                                  
                                 </div>
-                                <div class="best-sell-slider-item">
-                                    <article class="list-product text-left" *ngFor="let tix of tixs"  data-link-action="quickview" data-toggle="modal" data-target="#exampleModal" (click)="viewProduct(tix)">
+                                <div class="best-sell-slider-item" >
+                                    <article class="list-product text-left" *ngFor="let tix of tixsBestseller2"  data-link-action="quickview" data-toggle="modal" data-target="#exampleModal" (click)="viewProduct(tix)">
                                         <div class="product-inner">
                                             <div class="img-block">
                                                 <a  class="thumbnail">

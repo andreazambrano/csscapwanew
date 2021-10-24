@@ -54,6 +54,10 @@ public category:CategoryInterface;
 public tixs:TixInterface;
 public tix:TixInterface;
 
+  public tixsDiscount:any[]=[];
+  public tixsBestseller:any[]=[];
+  public tixsBestseller2:any[]=[];
+
 
 
 
@@ -99,13 +103,42 @@ public tix:TixInterface;
   } 
 
 getAllTixs(){
+  this.tixsDiscount=[];
+this.tixsBestseller=[];
+this.tixsBestseller2=[];
         this.dataApi.getAllTixsReturn().subscribe((res:any) => {
       if (res[0] === undefined){
         console.log("hey");
        }else{
-        this.tixs=res;            
+        this.tixs=res;   
+        this._uw.totalTixs=res.length; 
+        this.selectDiscount();        
+        this.selectBestseller();        
         }
      });  
+    }
+selectDiscount(){
+      for (let i=0;i<this._uw.totalTixs;i++){
+        if(this.tixs[i].discount!=undefined && this.tixs[i].discount ===true ){
+          this.tixsDiscount.push(this.tixs[i]);
+        }
+      }
+    } 
+selectBestseller(){
+  let yeoman = 0;
+      for (let i=0;i<this._uw.totalTixs;i++){
+        if(this.tixs[i].bestseller!=undefined && this.tixs[i].bestseller === true ){
+          if(yeoman>3){
+          this.tixsBestseller2.push(this.tixs[i]);
+          }
+          if(yeoman<=3){
+            yeoman=yeoman+1;
+          this.tixsBestseller.push(this.tixs[i]);
+          }
+        }
+      }
+      this._uw.bestsellerSize=yeoman;
+      
     }
 
 
@@ -132,7 +165,9 @@ tixCharge(tix){
 
 
   ngAfterViewInit() {
-
+this.tixsDiscount=[];
+this.tixsBestseller=[];
+this.tixsBestseller2=[];
      if (this._uw.loaded==true){
       this.loadAPI = new Promise(resolve => {
         // this.loadScript();

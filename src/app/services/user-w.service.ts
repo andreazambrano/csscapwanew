@@ -22,6 +22,7 @@ export class UserWService {
 		paypal:boolean=false;
 		zelle:boolean=false;
 	categorySelected:string;
+	bestsellerSize:number=0;
 	editingTrek:boolean=false;
 	errorFormAffiliate:boolean;
 	errorFormAddtixs:boolean;
