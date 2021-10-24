@@ -4807,8 +4807,9 @@ body.offcanvas-open {
 }
 
 .offcanvas .inner .foot .buttons a:hover {
-    background-color: #d62517;
-    color: #fff
+    background-color: #fbd904;
+    color: black
+    /*boton carrito*/
 }
 
 .offcanvas .inner .foot .buttons .current-btn {
@@ -6863,12 +6864,13 @@ offcanvas-menu>ul>li .menu-expand {
     text-transform: uppercase;
     display: inline-block;
     margin-left: 15px;
-    background: #d62517;
-    color: #fff
+    background: #fbd904;
+    color: black;
 }
 
 .product-details-content .pro-details-quality .pro-details-cart a:hover {
-    background-color: #1d1d1d
+    background-color: #1d1d1d;
+    color: white;
 }
 .product-details-content2 .pro-details-quality2 .pro-details-cart2 a:hover {
     background-color: #1da110
@@ -7741,12 +7743,12 @@ offcanvas-menu>ul>li .menu-expand {
 }
 
 .cart-shiping-update-wrapper .cart-clear>button:hover,.cart-shiping-update-wrapper .cart-shiping-update>a:hover {
-    background-color: #d62517;
+    background-color: #fbd904;
     color: #fff
 }
 
 .cart-shiping-update-wrapper .cart-clear>a {
-    background-color: #d62517;
+    background-color: #fbd904;
     color: #fff
 }
 
@@ -8194,8 +8196,8 @@ offcanvas-menu>ul>li .menu-expand {
 }
 
 .your-order-area .Place-order a {
-    background-color: #d62517;
-    color: #fff;
+    background-color: black;
+    color: white;
     display: block;
     font-weight: 700;
     letter-spacing: 1px;
@@ -8208,7 +8210,8 @@ offcanvas-menu>ul>li .menu-expand {
 }
 
 .your-order-area .Place-order a:hover {
-    background-color: #222
+    background-color: #fbd904;
+    color:black
 }
 
 .open-toggle,.open-toggle2 {
