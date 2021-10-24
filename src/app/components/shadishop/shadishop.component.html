@@ -65,7 +65,9 @@
                                                             <img class="first-img" src="{{tix.images[0]}}" alt="" />
                                                             <img class="second-img" src="{{tix.images[1]}}" *ngIf="tix.images[1]!=undefined" alt="" />
                                                         </a>
-                                        
+                                                         <ul class="product-flag" [hidden]="tix.discount==undefined">
+                                                                    <li class="new" style="color: #fbd904; font-weight: 600;;">Descuento {{tix.discount}} %</li>
+                                                                </ul>
                                                         <div class="add-to-link">
                                                             <ul>
                                                               
@@ -82,17 +84,20 @@
                                                     </ul> -->
                                                     <div class="product-decs">
                                                         <h2><a routerLink="shadishop" class="product-link">{{tix.name}}</a></h2>
-                                                        <div class="rating-product">
+                                                        <h2><a routerLink="shadishop" class="product-intro-info">{{tix.model}}</a></h2>
+                                                      <!--   <div class="rating-product">
                                                             <i class="ion-android-star"></i>
                                                             <i class="ion-android-star"></i>
                                                             <i class="ion-android-star"></i>
                                                             <i class="ion-android-star"></i>
                                                             <i class="ion-android-star color-gray"></i>
-                                                        </div>
+                                                        </div> -->
                                                         <div class="pricing-meta">
-                                                            <ul>
-                                                                <li class="old-price">$USD {{(tix.price + ((tix.price*15)/100))}} </li>
-                                                                <li class="current-price"> $USD {{tix.price}} </li>
+                                                             <ul>
+                                                                <li class="old-price" [hidden]="tix.oldprice==0">$USD {{tix.oldprice | number:'1.0-2'}} </li>   
+                                                                <li class="old-price" ></li>
+                                                                <li class="current-price"> 
+                                                                $USD {{tix.price}} </li>
                                                             </ul>
                                                         </div>
                                                     </div>
@@ -115,7 +120,9 @@
                                                         <a  class="thumbnail">
                                                             <img class="first-img" src="{{tix.images[0]}}" alt="" />
                                                             <img class="second-img" src="{{tix.images[1]}}" *ngIf="tix.images[1]!=undefined" alt="" />
-                                                        </a>
+                                                        </a> <ul class="product-flag" [hidden]="tix.discount==undefined">
+                                                                    <li class="new" style="color: #fbd904; font-weight: 600;">Descuento {{tix.discount}} %</li>
+                                                                </ul>
                                         
                                                         <div class="add-to-link">
                                                             <ul>
@@ -133,17 +140,20 @@
                                                     </ul> -->
                                                     <div class="product-decs">
                                                         <h2><a routerLink="shadishop" class="product-link">{{tix.name}}</a></h2>
-                                                        <div class="rating-product">
+                                                        <h2><a routerLink="shadishop" class="product-intro-info">{{tix.model}}</a></h2>
+                                                      <!--   <div class="rating-product">
                                                             <i class="ion-android-star"></i>
                                                             <i class="ion-android-star"></i>
                                                             <i class="ion-android-star"></i>
                                                             <i class="ion-android-star"></i>
                                                             <i class="ion-android-star color-gray"></i>
-                                                        </div>
+                                                        </div> -->
                                                         <div class="pricing-meta">
-                                                            <ul>
-                                                                <li class="old-price">$USD {{(tix.price + ((tix.price*15)/100))}} </li>
-                                                                <li class="current-price"> $USD {{tix.price}} </li>
+                                                             <ul>
+                                                                <li class="old-price" [hidden]="tix.oldprice==0">$USD {{tix.oldprice | number:'1.0-2'}} </li>   
+                                                                <li class="old-price" ></li>
+                                                                <li class="current-price"> 
+                                                                $USD {{tix.price}} </li>
                                                             </ul>
                                                         </div>
                                                     </div>
@@ -169,8 +179,8 @@
                                                                     <img class="first-img" src="{{tix.images[0]}}" alt="" />
                                                             <img class="second-img" src="{{tix.images[1]}}" *ngIf="tix.images[1]!=undefined" alt="" />
                                                                 </a>
-                                                                <ul class="product-flag">
-                                                                    <li class="new">new</li>
+                                                                <ul class="product-flag" [hidden]="tix.discount==undefined">
+                                                                    <li class="new" style="color: #fbd904; font-weight: 600;;">Descuento {{tix.discount}} %</li>
                                                                 </ul>
                                                             </div>
                                                         </div>
@@ -179,29 +189,33 @@
                                                         <div class="product-desc-wrap">
                                                             <div class="product-decs">
                                                                 <h2><a  class="product-link">{{tix.name}}</a></h2>
-                                                                <div class="rating-product">
+                                                                <!-- <h2><a  class="">{{tix.model}}</a></h2> -->
+                                                         <!--        <div class="rating-product">
                                                                     <i class="ion-android-star"></i>
                                                                     <i class="ion-android-star"></i>
                                                                     <i class="ion-android-star"></i>
                                                                     <i class="ion-android-star"></i>
                                                                     <i class="ion-android-star"></i>
-                                                                </div>
+                                                                </div> -->
                                                                 <div class="product-intro-info">
-                                                                    <p>{{tix.name}}</p>
+                                                                    <p>{{tix.model}}</p>
                                                                 </div>
                                                             </div>
                                                             <div class="box-inner d-flex">
                                                                 <div class="align-self-center">
                                                                     <div class="pricing-meta">
                                                                         <ul>
-                                                                            <li class="current-price">{{tix.price}}</li>
-                                                                        </ul>
+                                                                <li class="old-price" [hidden]="tix.oldprice==0">$USD {{tix.oldprice | number:'1.0-2'}} </li>   
+                                                                <li class="old-price" ></li>
+                                                                <li class="current-price"> 
+                                                                $USD {{tix.price}} </li>
+                                                            </ul>
                                                                     </div>
-                                                                    <div class="in-stock">Availability: <span>299 In Stock</span></div>
+                                                                <!--     <div class="in-stock">Availability: <span>299 In Stock</span></div> -->
                                                                     <div class="cart-btn">
                                                                         <a  class="add-to-curt" title="Comprar">Comprar</a>
                                                                     </div>
-                                                                    <div class="add-to-link">
+                                                                   <!--  <div class="add-to-link">
                                                                         <ul>
                                                                             <li>
                                                                                 <a  title="Add to Wishlist"><i class="icon-heart"></i></a>
@@ -215,7 +229,7 @@
                                                                                 </a>
                                                                             </li>
                                                                         </ul>
-                                                                    </div>
+                                                                    </div> -->
                                                                 </div>
                                                             </div>
                                                         </div>

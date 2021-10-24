@@ -18,16 +18,22 @@
                                                         <img class="first-img" src="{{tix.images[0]}}" alt="" />
                                                         <img class="second-img" src="{{tix.images[1]}}" alt="" />
                                                     </a>
+                                                     <ul class="product-flag" >
+                                                                    <li class="new" style="color: #fbd904; font-weight: 600;">Descuento {{tix.discount}}%</li>
+                                                                </ul>
                                                     </div>
                                                     <div class="product-decs">
                                                         <h2><a  class="product-link">{{tix.name}}</a></h2>
-                                                        <div class="rating-product">
+                                                         <div class="product-intro-info">
+                                                                    <p >{{tix.model}}</p>
+                                                                </div>
+                                           <!--              <div class="rating-product">
                                                             <i class="ion-android-star"></i>
                                                             <i class="ion-android-star"></i>
                                                             <i class="ion-android-star"></i>
                                                             <i class="ion-android-star"></i>
                                                             <i class="ion-android-star"></i>
-                                                        </div>
+                                                        </div> -->
                                                         <div class="pricing-meta">
                                                             <ul>
                                                                 <li class="current-price">${{tix.price}}</li>
@@ -64,13 +70,16 @@
                                             </div>
                                             <div class="product-decs">
                                                 <h2><a  class="product-link">{{tix.name}}</a></h2>
-                                                <div class="rating-product">
+                                                    <div class="product-intro-info">
+                                                                    <p  style="margin-bottom: 0; ">{{tix.model}}</p>
+                                                                </div>
+                                               <!--  <div class="rating-product">
                                                     <i class="ion-android-star"></i>
                                                     <i class="ion-android-star"></i>
                                                     <i class="ion-android-star color-gray"></i>
                                                     <i class="ion-android-star color-gray"></i>
                                                     <i class="ion-android-star color-gray"></i>
-                                                </div>
+                                                </div> -->
                                                 <div class="pricing-meta">
                                                     <ul>
                                                         <li class="current-price">${{tix.price}}</li>
@@ -92,16 +101,19 @@
                                             </div>
                                             <div class="product-decs">
                                                 <h2><a  class="product-link">{{tix.name}}</a></h2>
-                                                <div class="rating-product">
+                                               <div class="product-intro-info">
+                                                                    <p  style="margin-bottom: 0; ">{{tix.model}}</p>
+                                                                </div>
+                                               <!--  <div class="rating-product">
                                                     <i class="ion-android-star color-gray"></i>
                                                     <i class="ion-android-star color-gray"></i>
                                                     <i class="ion-android-star color-gray"></i>
                                                     <i class="ion-android-star color-gray"></i>
                                                     <i class="ion-android-star color-gray"></i>
-                                                </div>
+                                                </div> -->
                                                 <div class="pricing-meta">
                                                     <ul>
-                                                        <li class="current-price">$${{tix.price}}</li>
+                                                        <li class="current-price">${{tix.price}}</li>
                                                        
                                                     </ul>
                                                 </div>

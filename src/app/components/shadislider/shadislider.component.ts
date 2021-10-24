@@ -57,6 +57,7 @@ export class ShadisliderComponent implements OnInit {
             this.loadScript();
              this.loadScript2();
             this.loadScript3();
+            this._uw.totalCharge=this._uw.totalCharge+1;
            // this.loadScript4();
           });
         }

@@ -32,10 +32,26 @@ getAllTixs(){
       if (res[0] === undefined){
         console.log("hey");
        }else{
-        this.tixs=res;            
+        this.tixs=res;  
+        this._uw.totalTixsShop=res.length;  
+        this.discountCalculate();        
         }
      });  
     }
+
+discountCalculate(){
+   for (let i=0;i<this._uw.totalTixsShop;i++){
+      if(this.tixs[i].discount!=undefined){
+        let prev =this.tixs[i].price;
+        this.tixs[i].price=this.tixs[i].price-(this.tixs[i].price*this.tixs[i].discount/100)
+        this.tixs[i].oldprice= prev;
+      }
+
+      if(this.tixs[i].discount==undefined || this.tixs[i].discount===0){this.tixs[i].oldprice=0;}
+
+   }
+}
+
 tixCharge(tix){
   this._uw.tixPreview = tix;
   this._uw.tixPreview.quantity = 1;
@@ -50,7 +66,7 @@ tixCharge(tix){
       if(id==this._uw.car[i].id){
         this._uw.tixPreview.quantity=this._uw.car[i].quantity;
         this._uw.idToUpdate=i;
-        console.log("ya se encuentra en el carro!");
+       // console.log("ya se encuentra en el carro!");
       }
     }
     this.getAllTixs();

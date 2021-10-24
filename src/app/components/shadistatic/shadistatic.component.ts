@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { UserWService } from "../../services/user-w.service";
 @Component({
   selector: 'app-shadistatic',
   templateUrl: './shadistatic.component.html',
@@ -7,7 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ShadistaticComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+ public _uw:UserWService
+
+  	) { }
 
   ngOnInit() {
   }

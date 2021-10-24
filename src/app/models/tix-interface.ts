@@ -27,6 +27,7 @@ export interface TixInterface{
 	oncart?:boolean;
 	precio?:number;
 	price?:number;
+	oldprice?:number;
 	presentacion?:string;
 	productName?:string;
 	quantity?:number;

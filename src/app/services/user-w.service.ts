@@ -69,9 +69,11 @@ export class UserWService {
 	total:number=0;
 	totalBooks:number;
 	totalDiscount:number=0;
+	totalCharge:number=0;
 	totalNew:number=0;
 	totalProducts:number=0;
 	totalTixs:number;
+	totalTixsShop:number;
 	type:string;
 	typeGlobal:boolean=false;
 	typeSize:boolean=false;

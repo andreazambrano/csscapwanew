@@ -119,7 +119,7 @@ this.tixsBestseller2=[];
     }
 selectDiscount(){
       for (let i=0;i<this._uw.totalTixs;i++){
-        if(this.tixs[i].discount!=undefined && this.tixs[i].discount ===true ){
+        if(this.tixs[i].discount!=undefined && this.tixs[i].discount >0  ){
           this.tixsDiscount.push(this.tixs[i]);
         }
       }
@@ -131,14 +131,14 @@ selectBestseller(){
           if(yeoman>3){
           this.tixsBestseller2.push(this.tixs[i]);
           }
-          if(yeoman<=3){
+          if(yeoman<=3 ){
             yeoman=yeoman+1;
           this.tixsBestseller.push(this.tixs[i]);
           }
         }
       }
       this._uw.bestsellerSize=yeoman;
-      
+
     }
 
 
