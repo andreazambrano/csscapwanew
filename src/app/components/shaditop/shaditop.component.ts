@@ -25,7 +25,7 @@ export class ShaditopComponent implements OnInit {
 
 public categories:CategoryInterface;
 public category:CategoryInterface;
-
+,
 
 
 getAllCategories(){

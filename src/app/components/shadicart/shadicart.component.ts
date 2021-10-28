@@ -18,6 +18,7 @@ remove(i){
       // if(this._uw.numProd<1){
       // 	this.router.navigate(['/']);
       // }
+      
     } 
   ngOnInit() {
   }
