@@ -8,7 +8,7 @@
             </div>
             <div class="body customScroll">
                 <ul class="minicart-product-list">
-                    <li *ngFor="let item of _uw.car">
+                    <li *ngFor="let item of _uw.car;let i = index">
                         <a  class="image"><img src="{{item.images[0]}}" alt="Cart product Image"></a>
                         <div class="content">
                             <a href="single-product.html" class="title">{{item.name}}</a>
