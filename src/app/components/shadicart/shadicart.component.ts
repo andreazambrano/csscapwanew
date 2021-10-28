@@ -11,7 +11,14 @@ export class ShadicartComponent implements OnInit {
     public _uw:UserWService
 
   	) { }
-
+remove(i){
+      // this._uw.subTotal=this._uw.subTotal-(this._uw.car[i].quantity*this._uw.car[i].globalPrice);
+      this._uw.car.splice(i, 1);
+      this._uw.numProd=this._uw.numProd-1;
+      // if(this._uw.numProd<1){
+      // 	this.router.navigate(['/']);
+      // }
+    } 
   ngOnInit() {
   }
 

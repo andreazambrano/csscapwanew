@@ -13,7 +13,7 @@
                         <div class="content">
                             <a href="single-product.html" class="title">{{item.name}}</a>
                             <span class="quantity-price">{{item.quantity}} x <span class="amount">${{item.price}}</span></span>
-                            <a href="index.html#" class="remove">×</a>
+                            <a (click)="remove(i)"  class="remove">×</a>
                         </div>
                     </li>
                  
