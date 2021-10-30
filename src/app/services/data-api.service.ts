@@ -87,7 +87,7 @@ export class DataApiService {
 sendContact(contact){
 		const url_api='https://0hny78x7md.execute-api.us-east-1.amazonaws.com/api/contact';
 		return this.http
-		.post(url_api, contact)
+		.post(url_api, contact,{headers:this.headers})
 		.pipe(map(data => data));
 	}
 	
@@ -102,7 +102,7 @@ sendContact(contact){
 	}
 	getOrderByNpedido(npedido: string){
 		const url_api = `https://db.buckapi.com:3032/api/order?filter[where][npedido]=${npedido}`;
-		this.order = this.http.get(url_api),{headers:this.headers};
+		this.order = this.http.get(url_api);
 		return (this.order);
 
 		// return this.http.get(url_api);
