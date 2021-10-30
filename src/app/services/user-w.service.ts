@@ -62,6 +62,7 @@ export class UserWService {
 	subTotal:number=0;
 	tixs:any[]=[];
 	tixPreview:any={};
+	contact:any={};
 	//tixPreview:any[]=[];
 	tixsOrigin:any[]=[];
 	tixsDiscount:any={};

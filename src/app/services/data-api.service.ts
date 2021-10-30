@@ -6,6 +6,7 @@ import { AuthService } from './auth.service';
 import { TixInterface } from '../models/tix-interface';
 import { SaleInterface } from '../models/sale-interface';
 import { OrderInterface } from '../models/order-interface';
+import { ContactInterface } from '../models/contact-interface';
 import { InfoInterface } from '../models/info-interface';
 import { UserWService } from "./user-w.service";
 
@@ -22,13 +23,16 @@ export class DataApiService {
 	tix: Observable<any>;
 	sale: Observable<any>;
 	order: Observable<any>;
+	contact: Observable<any>;
   constructor(
   	public _uw:UserWService,
   	private http: HttpClient, 
   	private authService:AuthService
   	) {}
   	headers : HttpHeaders = new HttpHeaders({
-  		"Content-Type":"application/json",
+  	"Content-Type":"application/json",
+  		   "Access-Control-Allow-Headers" : "Content-Type",
+            "Access-Control-Allow-Origin": "*",
   		Authorization: this.authService.getToken()
   		});
   	updateTix(tix :TixInterface, id: string){
@@ -81,13 +85,15 @@ export class DataApiService {
 		.post<OrderInterface>(url_api, order)
 		.pipe(map(data => data));
 	}
-sendMailNewBookAppToAdmin(book){
-		const url_api='https://email.penguinscleaning.ca:3005/newBookAppToAdmin';
+sendContact(contact){
+		const url_api='https://0hny78x7md.execute-api.us-east-1.amazonaws.com/api/contact';
 		return this.http
-		.post(url_api, book)
+		.post(url_api, contact)
 		.pipe(map(data => data));
 	}
 	
+
+
 	updateOrder(order :OrderInterface, id: string){
 		// let token = this.authService.getToken();
 		const url_api=`https://db.buckapi.com:3032/api/order/${id}`;
