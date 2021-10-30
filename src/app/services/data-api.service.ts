@@ -102,7 +102,7 @@ sendContact(contact){
 	}
 	getOrderByNpedido(npedido: string){
 		const url_api = `https://db.buckapi.com:3032/api/order?filter[where][npedido]=${npedido}`;
-		this.order = this.http.get(url_api);
+		this.order = this.http.get(url_api),{headers:this.headers};
 		return (this.order);
 
 		// return this.http.get(url_api);
