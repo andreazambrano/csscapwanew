@@ -32,9 +32,8 @@ export class DataApiService {
   	headers : HttpHeaders = new HttpHeaders({
   	"Content-Type":"application/json",
   		   "Access-Control-Allow-Headers" : "Content-Type",
-            "Access-Control-Allow-Origin": "*",
-  		Authorization: this.authService.getToken()
-  		});
+            "Access-Control-Allow-Origin": "*"
+              		});
   	updateTix(tix :TixInterface, id: string){
 		// let token = this.authService.getToken();
 		const url_api=`https://db.buckapi.com:3032/api/tixes/${id}`;
