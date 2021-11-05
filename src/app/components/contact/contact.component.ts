@@ -24,14 +24,14 @@ export class ContactComponent implements OnInit {
     private location: Location,
     private route:ActivatedRoute,
     private router: Router
-  	) { }
+    ) { }
  ngFormContact: FormGroup;
     submitted = false;
     public isError = false;
     public waiting = false;
     public msgError = '';
     contact = {
- 		nombre:"",
+    nombre:"",
         email:"",
         mensaje:"",
         asunto:""

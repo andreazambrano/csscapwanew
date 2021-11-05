@@ -62,13 +62,13 @@
                         <div class="contact-title mb-30">
                             <h2>Dejanos un mensaje</h2>
                         </div>
-                        <form class="contact-form-style" id="contact-form"  [formGroup]="ngFormContact" (ngSubmit) ="sendContact()"  >
+                        <form class="contact-form-style" id="contact-form"  [formGroup]="ngFormContact"  >
                             <div class="row">
                                 <div class="col-lg-6">
                                     <div class="form-group ">
 
                                                 <label class="focus-label">Tu nombre</label>
-                                                <input type="text" class="form-control " id="nombre" formControlName="nombre" placeholder="Nombre" [(ngModel)]="contact.nombre" [ngClass]="{'is-invalid': submitted && fval.nombre.errors }"required>
+                                                <input type="text" class="form-control " id="nombre" formControlName="nombre" placeholder="nombre" [(ngModel)]="contact.nombre" [ngClass]="{'is-invalid': submitted && fval.nombre.errors }"required>
 
                                                 <div *ngIf="submitted && fval.nombre.errors" class="invalid-feedback">
                                                     <div *ngIf="fval.nombre.errors.required">

@@ -30,10 +30,10 @@ export class DataApiService {
   	private authService:AuthService
   	) {}
   	headers : HttpHeaders = new HttpHeaders({
-  	"Content-Type":"application/json",
-  		   "Access-Control-Allow-Headers" : "Content-Type",
-            "Access-Control-Allow-Origin": "*"
-              		});
+  		"Content-Type":"application/json",
+    	"Access-Control-Allow-Headers" : "Content-Type",
+    	"Access-Control-Allow-Origin": "*"
+    });
   	updateTix(tix :TixInterface, id: string){
 		// let token = this.authService.getToken();
 		const url_api=`https://db.buckapi.com:3032/api/tixes/${id}`;
@@ -87,7 +87,7 @@ export class DataApiService {
 sendContact(contact){
 		const url_api='https://0hny78x7md.execute-api.us-east-1.amazonaws.com/api/contact';
 		return this.http
-		.post(url_api, contact,{headers:this.headers})
+		.post(url_api, contact)
 		.pipe(map(data => data));
 	}
 	
