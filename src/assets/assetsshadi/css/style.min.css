@@ -10532,7 +10532,15 @@ offcanvas-menu>ul>li .menu-expand {
     border-bottom: 0;
     text-transform: capitalize
 }
-
+.bs-canvas-body {
+    background: #fff;
+    /*background: #f9f9f9;*/
+    position: absolute;
+    width: 100%;
+    top: 48px;
+    bottom: 190px;
+    overflow-y: scroll;
+}
 @media only screen and (max-width: 767px) {
     .faq-area .single-my-account h3.panel-title a {
         padding:12px 38px

@@ -79,7 +79,7 @@ export class DataApiService {
 		.pipe(map(data => data));
 	}
 	saveOrder(order :OrderInterface){
-		const url_api='https://db.buckapi.com:3032/api/order';
+		const url_api='https://db.buckapi.com:3032/api/orders';
 		return this.http
 		.post<OrderInterface>(url_api, order)
 		.pipe(map(data => data));

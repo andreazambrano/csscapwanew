@@ -13,7 +13,7 @@
                         <div class="content">
                             <a href="single-product.html" class="title">{{item.name}}</a>
                             <span class="quantity-price">{{item.quantity}} x <span class="amount">${{item.price}}</span></span>
-                            <a (click)="remove(i)"  class="remove">×</a>
+                            <a (click)="remove(i)"  class="remove" style="cursor: pointer;">×</a>
                         </div>
                     </li>
                  
@@ -36,7 +36,7 @@
                     </table>
                 </div>
                 <div class="buttons">
-                    <a routerLink="cart" class="btn btn-dark btn-hover-primary mb-30px offcanvas-close" >ver carro</a>
+                  <!--   <a routerLink="cart" class="btn btn-dark btn-hover-primary mb-30px offcanvas-close" >ver carro</a> -->
                     <a routerLink="checkout" class="btn btn-outline-dark current-btn offcanvas-close"  style="background-color: #fbd904;color: black;">Procesar compra</a>
                 </div>
                 <p class="minicart-message">Envío a todo el pais!</p>

@@ -1124,7 +1124,15 @@ label {
         width:730px
     }
 }
-
+.bs-canvas-body {
+    background: #fff;
+    /*background: #f9f9f9;*/
+    position: absolute;
+    width: 100%;
+    top: 48px;
+    bottom: 190px;
+    overflow-y: scroll;
+}
 .header-menu .header-menu-vertical .menu-content li .sub-menu li .static-bottom-vermenu {
     margin: 0 -30px;
     margin-top: -300px;

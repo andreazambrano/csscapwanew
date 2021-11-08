@@ -11,7 +11,6 @@ import { ScrollTopService }  from '../../services/scroll-top.service';
 import { isError } from "util";
 import { ActivatedRoute, Params} from '@angular/router';
 
-
 @Component({
   selector: 'app-checkout',
   templateUrl: './checkout.component.html',
@@ -28,7 +27,7 @@ export class CheckoutComponent implements OnInit {
     public router: Router,
     private formBuilder: FormBuilder
     ) { }
-
+  npedido=0;
   public sale : SaleInterface ={
       car:[],
       email:"",
@@ -56,64 +55,31 @@ export class CheckoutComponent implements OnInit {
       personaContacto:"",
       total:0
     };
-recargo=0;
+    recargo=0;
     ngFormSendSale: FormGroup;
     ngFormSendOrder: FormGroup;
     submitted = false;
-    okOrder(){};
+    okOrder(){
+      this.order.car=this._uw.car;
+      this.npedido=this.aleatorio(10000,99999);
+      let npedidoString = this.npedido.toString();
+      this.order.npedido=npedidoString;
+      this._uw.pedido.nroReserva=this.order.npedido;
+      this._uw.order=this.order;
+       this.dataApi.saveOrder(this._uw.order).subscribe(
+           // tix => this.router.navigate(['/pago'])
+        );
+
+    };
 public setMetodo(){
-      if(this.ngFormSendOrder.value.metodo=="bsTansferencia"){
-           this.recargo=0;
-           this._uw.recargo=false;
-      //  this.setBs();
-      }   
-       if(this.ngFormSendOrder.value.metodo=="bitcoin"){
-    //      this.setUsd();
-         this.recargo=(this._uw.subTotal*this._uw.currency)*(this._uw.info[0].bitcoin/100);
-             this._uw.recargo=true;
-      } 
-      if(this.ngFormSendOrder.value.metodo=="paypal"){
-     //     this.setUsd();
-          this.recargo=(this._uw.subTotal*this._uw.currency)*(this._uw.info[0].paypal/100);
-             this._uw.recargo=true;
-      } 
-       if(this.ngFormSendOrder.value.metodo=="bsTansferencia"){
-        this.recargo=0;
-    //    this.setBs();
-           this._uw.recargo=false;
-      } 
-       if(this.ngFormSendOrder.value.metodo=="bsPunto"){
-        this.recargo=0;
-   //     this.setBs();
-           this._uw.recargo=false;
-      } 
-       if(this.ngFormSendOrder.value.metodo=="colp"){
-        this.recargo=0;
-   //     this.setColp();
-           this._uw.recargo=false;
-      } 
-       if(this.ngFormSendOrder.value.metodo=="usd"){
-        this.recargo=0;
-     //     this.setUsd();
-             this._uw.recargo=false;
-      }    
-       if(this.ngFormSendOrder.value.metodo=="usdt"){
-        this.recargo=0;
-   //       this.setUsd();
-             this._uw.recargo=true;
-      }      
+     
     }
+  public aleatorio(a,b) {
+    return Math.round(Math.random()*(b-a)+parseInt(a));
+  }
 
   ngOnInit() {
 
-     this.ngFormSendSale = this.formBuilder.group({
-      direccion: ['', [Validators.required]],
-      telefono: ['', [Validators.required]],
-      personaContacto: ['', [Validators.required]],
-      metodo:['',[Validators.required]],
-      email: ['', [Validators.required]],
-      total: [0,[Validators.required]]
-    });
 
     this.ngFormSendOrder = this.formBuilder.group({
       direccion: ['', [Validators.required]],
