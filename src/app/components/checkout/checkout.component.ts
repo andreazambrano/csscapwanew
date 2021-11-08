@@ -34,7 +34,6 @@ export class CheckoutComponent implements OnInit {
       status:"",
       metodo:"",
       direccion:"",
-      id:"",
       personaContacto:"",
       total:0
     };
@@ -45,7 +44,6 @@ export class CheckoutComponent implements OnInit {
       status:"",
       metodo:"",
       direccion:"",
-      id:"",
       steeps:[
         {steep:true},
         {steep:false},
@@ -60,12 +58,18 @@ export class CheckoutComponent implements OnInit {
     ngFormSendOrder: FormGroup;
     submitted = false;
     okOrder(){
+       this.submitted = true;
+        if (this.ngFormSendOrder.invalid) {
+          this._uw.errorFormSendOrder=true;
+        return;
+            } 
       this.order.car=this._uw.car;
       this.npedido=this.aleatorio(10000,99999);
       let npedidoString = this.npedido.toString();
       this.order.npedido=npedidoString;
       this._uw.pedido.nroReserva=this.order.npedido;
       this._uw.order=this.order;
+      this._uw.order.total=this._uw.total;
        this.dataApi.saveOrder(this._uw.order).subscribe(
            // tix => this.router.navigate(['/pago'])
         );

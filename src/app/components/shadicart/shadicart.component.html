@@ -6,20 +6,7 @@
                 <span class="title">Mi carrito</span>
                 <button class="offcanvas-close">×</button>
             </div>
-            <div class="body customScroll">
-                <ul class="minicart-product-list">
-                    <li *ngFor="let item of _uw.car;let i = index">
-                        <a  class="image"><img src="{{item.images[0]}}" alt="Cart product Image"></a>
-                        <div class="content">
-                            <a href="single-product.html" class="title">{{item.name}}</a>
-                            <span class="quantity-price">{{item.quantity}} x <span class="amount">${{item.price}}</span></span>
-                            <a (click)="remove(i)"  class="remove" style="cursor: pointer;">×</a>
-                        </div>
-                    </li>
-                 
-                </ul>
-            </div>
-            <div class="foot">
+             <div class="foot">
                 <div class="sub-total">
                     <table class="table">
                         <tbody>
@@ -37,10 +24,25 @@
                 </div>
                 <div class="buttons">
                   <!--   <a routerLink="cart" class="btn btn-dark btn-hover-primary mb-30px offcanvas-close" >ver carro</a> -->
-                    <a routerLink="checkout" class="btn btn-outline-dark current-btn offcanvas-close"  style="background-color: #fbd904;color: black;">Procesar compra</a>
+          <!--           <a routerLink="checkout" class="btn btn-outline-dark current-btn offcanvas-close"  style="background-color: #fbd904;color: black;">Procesar compra</a>  -->
+          <a routerLink="checkout" class="btn btn-dark btn-hover-primary  offcanvas-close" >Procesar compra</a>
                 </div>
                 <p class="minicart-message">Envío a todo el pais!</p>
             </div>
+            <div class="body customScroll">
+                <ul class="minicart-product-list">
+                    <li *ngFor="let item of _uw.car;let i = index">
+                        <a  class="image"><img src="{{item.images[0]}}" alt="Cart product Image"></a>
+                        <div class="content">
+                            <a href="single-product.html" class="title">{{item.name}}</a>
+                            <span class="quantity-price">{{item.quantity}} x <span class="amount">${{item.price}}</span></span>
+                            <a (click)="remove(i)"  class="remove" style="cursor: pointer;">×</a>
+                        </div>
+                    </li>
+                 
+                </ul>
+            </div>
+           
         </div>
         <div class="inner" [hidden]="_uw.car.length>0">
             <div class="head">

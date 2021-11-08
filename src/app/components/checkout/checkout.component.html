@@ -38,7 +38,7 @@
                                             <i class="uil uil-mobile-android-alt lgn_icon"></i>
                                             <span class="required"></span>
                                             <div *ngIf="submitted && fval.telefono.errors" class="invalid-feedback">
-                                                <div *ngIf="fval.personaContacto.errors.required" class="errorLabel">
+                                                <div *ngIf="fval.telefono.errors.required" class="errorLabel">
                                                 * Un número de teléfono de la persona que recibe.
                                                 </div>
                                             </div>
@@ -78,10 +78,21 @@
                                         </select>
                                     </div>
                                 </div> -->
-                                <div class="col-lg-12">
-                                    <div class="form-group " [hidden]="!this.data || _uw.feet!=2" style="text-align: center;" >
+                              <!--   <div class="col-lg-12">
+                                    <div class="form-group "style="text-align: center;" >
                                         <label class="control-label"style="font-size: 18px;" >Lugar de entrega</label>
-                                        <textarea class="form-control height-80" id="direccion" formControlName="direccion" placeholder="Dirección (Urbanización, # de casa y punto de referencia)" [(ngModel)]="order.direccion"
+                                       
+                                    </div>
+                                </div> -->
+                              
+                                
+                            </div>
+                            
+                            <div class="additional-info-wrap">
+                                <!-- <h4>Información adicional</h4> -->
+                                <div class="additional-info">
+                                    <label>Direccion deentrega</label>
+                                   <textarea class="form-control height-80" id="direccion" formControlName="direccion" placeholder="Dirección (Urbanización, # de casa y punto de referencia)" [(ngModel)]="order.direccion"
                                       [ngClass]="{ 'is-invalid': submitted && fval.direccion.errors }"
                                       required></textarea>
                                         <span class="required"></span>
@@ -90,17 +101,6 @@
                                           * Dirección donde deseas que llevemos tu pedido.
                                             </div>
                                         </div>
-                                    </div>
-                                </div>
-                              
-                                
-                            </div>
-                            
-                            <div class="additional-info-wrap">
-                                <h4>Información adicional</h4>
-                                <div class="additional-info">
-                                    <label>Nota</label>
-                                    <textarea placeholder="Notas sobre su pedido, p. Ej. notas especiales para la entrega. " name="message"></textarea>
                                 </div>
                             </div>
                            
@@ -202,8 +202,9 @@
                             </div>
                             <div class="Place-order mt-25">
                              <!--     <a routerLink="../cart" class="btn btn-dark btn-hover-primary mb-30px offcanvas-close" >ver carro</a> -->
-                              <!--   <a class="btn-hover" routerLink="pago" style="background-color: #fbd904;color: black;">Realizar pedido</a> -->
-                                  <button class="cart-proccess-btn" type="submit"  style="background-color: #fbd904;color: black;">Aceptar</button>
+                                <a class="btn btn-dark btn-hover-primary "  type="submit"   (click)="okOrder()">Realizar pedido</a>
+                               <!--   <a class="btn btn-dark btn-hover-primary "  type="submit"   style="background-color: #fbd904;color: black;" (click)="okOrder()">Realizar pedido</a> -->
+                                <!--   <button class="cart-proccess-btn" type="submit"  style="background-color: #fbd904;color: black;">Aceptar</button> -->
                             </div>
                         </div>
                     </div>
