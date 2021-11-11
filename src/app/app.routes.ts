@@ -20,7 +20,8 @@ import {
 	ShaditopComponent,
 	ShadishopComponent,
 	ContactComponent,
-	CartComponent
+	CartComponent,
+	CompraComponent
 
 	}from "./components/index.paginas";
 
@@ -39,6 +40,7 @@ const app_routes: Routes = [
 	{path:'cart',component:CartComponent},
 	{path:'contact',component:ContactComponent},
 	{path:'checkout',component:CheckoutComponent},
+	{path:'compra',component:CompraComponent},
 /*	{path:'fruittopbar',component:FruittopbarComponent},
 	{path:'fruitproducts',component:FruitproductsComponent},
 	{path:'fruitbanner',component:FruitbannerComponent},

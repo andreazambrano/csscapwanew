@@ -91,7 +91,7 @@
                             <div class="additional-info-wrap">
                                 <!-- <h4>Información adicional</h4> -->
                                 <div class="additional-info">
-                                    <label>Direccion deentrega</label>
+                                    <label>Direccion de entrega</label>
                                    <textarea class="form-control height-80" id="direccion" formControlName="direccion" placeholder="Dirección (Urbanización, # de casa y punto de referencia)" [(ngModel)]="order.direccion"
                                       [ngClass]="{ 'is-invalid': submitted && fval.direccion.errors }"
                                       required></textarea>
@@ -202,7 +202,7 @@
                             </div>
                             <div class="Place-order mt-25">
                              <!--     <a routerLink="../cart" class="btn btn-dark btn-hover-primary mb-30px offcanvas-close" >ver carro</a> -->
-                                <a class="btn btn-dark btn-hover-primary "  type="submit"   (click)="okOrder()">Realizar pedido</a>
+                                <a class="btn btn-dark btn-hover-primary "  type="submit"   (click)="okOrder()" routerLink="../compra">Realizar pedido</a>
                                <!--   <a class="btn btn-dark btn-hover-primary "  type="submit"   style="background-color: #fbd904;color: black;" (click)="okOrder()">Realizar pedido</a> -->
                                 <!--   <button class="cart-proccess-btn" type="submit"  style="background-color: #fbd904;color: black;">Aceptar</button> -->
                             </div>
