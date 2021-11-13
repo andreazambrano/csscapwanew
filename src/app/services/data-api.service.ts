@@ -34,6 +34,7 @@ export class DataApiService {
     	"Access-Control-Allow-Headers" : "Content-Type",
     	"Access-Control-Allow-Origin": "*"
     });
+   
   	updateTix(tix :TixInterface, id: string){
 		// let token = this.authService.getToken();
 		const url_api=`https://db.buckapi.com:3032/api/tixes/${id}`;
@@ -90,7 +91,12 @@ sendContact(contact){
 		.post(url_api, contact)
 		.pipe(map(data => data));
 	}
-	
+	sendOrder(order){
+		const url_api='https://0hny78x7md.execute-api.us-east-1.amazonaws.com/api/neworder';
+		return this.http
+		.post(url_api, order)
+		.pipe(map(data => data));
+	}
 
 
 	updateOrder(order :OrderInterface, id: string){
@@ -101,7 +107,7 @@ sendContact(contact){
 		.pipe(map(data => data));
 	}
 	getOrderByNpedido(npedido: string){
-		const url_api = `https://db.buckapi.com:3032/api/order?filter[where][npedido]=${npedido}`;
+		const url_api = `https://db.buckapi.com:3032/api/orders/${npedido}`;
 		this.order = this.http.get(url_api);
 		return (this.order);
 

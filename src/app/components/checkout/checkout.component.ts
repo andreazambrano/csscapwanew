@@ -38,6 +38,15 @@ export class CheckoutComponent implements OnInit {
       total:0
     };
     
+
+
+    public orderToSend : OrderInterface ={
+      name:"",
+      link:"",
+      message:"",
+      email:""
+    };
+
     public order : OrderInterface ={
       car:[],
       email:"",
@@ -70,11 +79,19 @@ export class CheckoutComponent implements OnInit {
       this._uw.pedido.nroReserva=this.order.npedido;
       this._uw.order=this.order;
       this._uw.order.total=this._uw.total;
+      this.orderToSend.message="Hola, hemos registrado una nueva orden de compra a nombre de: ";
+      this.orderToSend.name=this.order.personaContacto;
+      this.orderToSend.email=this.order.email;
+      this.orderToSend.link="https://www.corpcssca.com/cart/"+this._uw.pedido.nroReserva;
        this.dataApi.saveOrder(this._uw.order).subscribe(
-           // tix => this.router.navigate(['/pago'])
+           order => this.router.navigate(['/compra'])
         );
+             this.dataApi.sendOrder(this.orderToSend).subscribe();
 
     };
+
+
+    
 public setMetodo(){
      
     }

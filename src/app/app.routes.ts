@@ -37,7 +37,7 @@ const app_routes: Routes = [
 	{path:'shadislider',component:ShadisliderComponent},
 	{path:'shaditop',component:ShaditopComponent},
 	{path:'shop',component:ShadishopComponent},
-	{path:'cart',component:CartComponent},
+	{path:'cart/:id',component:CartComponent},
 	{path:'contact',component:ContactComponent},
 	{path:'checkout',component:CheckoutComponent},
 	{path:'compra',component:CompraComponent},

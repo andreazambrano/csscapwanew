@@ -1,8 +1,8 @@
 
  <header class="header-wrapper" >
             <!-- Header Nav Start -->
-            <div class="header-nav bg-black d-none d-md-block"  [hidden]="router.url.includes('/checkout')">
-                <div class="container" [hidden]="router.url.includes('/checkout')">
+            <div class="header-nav bg-black d-none d-md-block"  [hidden]="router.url.includes('/checkout') || router.url.includes('/cart') ">
+                <div class="container" [hidden]="router.url.includes('/checkout') || router.url.includes('/cart') ">
                     <div class="header-nav-wrapper d-md-flex d-sm-flex d-xl-flex d-lg-flex justify-content-between">
                         <div class="header-static-nav d-flex">
                             <p>Bienvenidos !</p>
@@ -47,7 +47,7 @@
             </div>
             <!-- Mobile Header Nav Start -->
 
-            <div class="header-nav header-nav-mobile bg-black d-md-none" [hidden]="router.url.includes('/checkout')">
+            <div class="header-nav header-nav-mobile bg-black d-md-none" [hidden]="router.url.includes('/checkout') || router.url.includes('/cart')">
                 <div class="container" [hidden]="router.url.includes('/checkout')">
                     <div class="header-nav-wrapper " >
                        <!--  <div class="header-static-nav f-none text-center">
@@ -104,7 +104,7 @@
                                 <strong>Corporación suramericana de servicios c.a.</strong>
                             </div>
                         </div>
-                        <div class="col-md-9 align-self-center" [hidden]="router.url.includes('/checkout')">
+                        <div class="col-md-9 align-self-center" [hidden]="router.url.includes('/checkout') || router.url.includes('/cart')">
                             <div class="header-right-element d-flex justify-content-between">
                                 <div class="search-element media-body mr-20px">
                                     <form class="d-flex" action="index.html#">
@@ -136,8 +136,8 @@
                 </div>
             </div>
             <!-- Header Nav End -->
-            <div class="header-menu bg-black sticky-nav d-lg-block d-none padding-0px" [hidden]="router.url.includes('/checkout')">
-                <div class="container" [hidden]="router.url.includes('/checkout')">
+            <div class="header-menu bg-black sticky-nav d-lg-block d-none padding-0px" [hidden]="router.url.includes('/checkout') ">
+                <div class="container" [hidden]="router.url.includes('/checkout') ||  router.url.includes('/cart') ">
                     <div class="row">
                         <div class="col-lg-3">
                             <div class="header-menu-vertical">
@@ -186,7 +186,7 @@
         <!-- Header Section End Here -->    
 
         <!-- Mobile Header Section Start -->
-    <div class="mobile-header d-lg-none sticky-nav white-bg ptb-20px" >
+    <div class="mobile-header d-lg-none sticky-nav white-bg ptb-20px"  [hidden]="router.url.includes('/cart') ">
         <div class="container">
             <div class="row align-items-center">
 
@@ -223,7 +223,7 @@
         </div>
     </div >
 
-    <div class="mobile-category-nav d-lg-none " [hidden]="router.url.includes('/checkout')">
+    <div class="mobile-category-nav d-lg-none " [hidden]="router.url.includes('/checkout') || router.url.includes('/cart') ">
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
