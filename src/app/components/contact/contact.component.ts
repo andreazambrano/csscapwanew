@@ -51,7 +51,7 @@ sendContact(){
       this._uw.isLogged=true;
     
       this.dataApi.sendContact(this.contact).subscribe();
-    //  this.router.navigate(['/question']);
+     this.router.navigate(['/gracias']);
     } else {
       this.onIsError();
     }

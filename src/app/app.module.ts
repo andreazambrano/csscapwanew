@@ -65,6 +65,7 @@ import { CheckoutComponent } from './components/checkout/checkout.component';
 import { CartComponent } from './components/cart/cart.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { CompraComponent } from './components/compra/compra.component';
+import { GraciasComponent } from './components/gracias/gracias.component';
 
 @NgModule({
   declarations: [
@@ -95,6 +96,7 @@ import { CompraComponent } from './components/compra/compra.component';
     CartComponent,
     ContactComponent,
     CompraComponent,
+    GraciasComponent,
   ],
   imports: [
     BrowserModule,
