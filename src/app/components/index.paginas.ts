@@ -20,3 +20,4 @@ export { ShadishopComponent } from "./shadishop/shadishop.component";
 export { CartComponent } from "./cart/cart.component";
 export { ContactComponent } from "./contact/contact.component";
 export { CompraComponent } from "./compra/compra.component";
+export { GraciasComponent } from "./gracias/gracias.component";

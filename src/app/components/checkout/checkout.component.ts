@@ -71,7 +71,7 @@ export class CheckoutComponent implements OnInit {
       this._uw.order=this.order;
       this._uw.order.total=this._uw.total;
        this.dataApi.saveOrder(this._uw.order).subscribe(
-           // tix => this.router.navigate(['/pago'])
+           tix => this.router.navigate(['/compra'])
         );
 
     };
