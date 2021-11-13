@@ -51,7 +51,9 @@ discountCalculate(){
 
    }
 }
-
+nofiltered(){
+  this._uw.filtered=false;
+}
 tixCharge(tix){
   this._uw.tixPreview = tix;
   this._uw.tixPreview.quantity = 1;

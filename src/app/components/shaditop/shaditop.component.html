@@ -143,13 +143,13 @@
                             <div class="header-menu-vertical">
                                 <h4 class="menu-title">Categorias </h4> 
                                 <ul class="menu-content display-none"> 
-                                      <li class="menu-item"  *ngFor="let category of categories" style="cursor: pointer;">
-                                            <a routerlink="" >{{category.name }} 
+                                      <li class="menu-item"  *ngFor="let category of categories" style="cursor: pointer;" (click)="filterCategory(category)">
+                                            <a  >{{category.name }} 
                                                 <i class="ion-ios-arrow-right" [hidden]="category.subs[0]==undefined"></i></a>
                                             <ul class="sub-menu sub-menu-2" *ngIf="category.subs[0]!=undefined">
                                                 <li>
                                                     <ul class="submenu-item">
-                                                        <li *ngFor="let item of category.subs" style="cursor: pointer;"><a routerlink="">{{item.name}}</a></li>
+                                                        <li *ngFor="let item of category.subs" style="cursor: pointer;" (click)="filterSubcategory(item)"><a>{{item.name}}</a></li>
                                                     </ul>
                                                 </li>
                                             </ul>
@@ -240,10 +240,10 @@
                         <nav class="category-menu">
                             <ul>
                                 <li class="menu-item-has-children menu-item-has-children-1" *ngFor="let category of categories" style="cursor: pointer;">
-                                    <a routerlink="">{{category.name }} <i class="ion-ios-arrow-down" [hidden]="category.subs[0]==undefined"></i></a>
+                                    <a (click)="filterCategory(category)">{{category.name }} <i class="ion-ios-arrow-down" [hidden]="category.subs[0]==undefined"  routerLink=""></i></a>
                                     <!-- category submenu -->
                                     <ul class="category-mega-menu category-mega-menu-1" *ngIf="category.subs[0]!=undefined">
-                                        <li *ngFor="let item of category.subs" style="cursor: pointer;"><a routerlink="">{{item.name}}</a></li>
+                                        <li *ngFor="let item of category.subs" style="cursor: pointer;" ><a (click)="filterSubcategory(item)" routerLink="">{{item.name}}</a></li>
                                         
                                     </ul>
                                 </li>

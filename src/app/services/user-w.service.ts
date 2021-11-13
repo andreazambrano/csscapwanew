@@ -22,6 +22,9 @@ export class UserWService {
 		paypal:boolean=false;
 		zelle:boolean=false;
 	categorySelected:string;
+	categorySelectedName:string;
+	subcategorySelected:string;
+	subcategorySelectedName:string;
 	bestsellerSize:number=0;
 	editingTrek:boolean=false;
 	errorFormAffiliate:boolean;
@@ -33,6 +36,7 @@ export class UserWService {
 	feet:number=0;
 	file:any[]=[];
 	filter:boolean=false;
+	filtered:boolean=false;
 	foredit:any={};
 	globalCategory:boolean=true;
 	idCard:string;

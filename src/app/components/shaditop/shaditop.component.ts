@@ -26,7 +26,19 @@ export class ShaditopComponent implements OnInit {
 public categories:CategoryInterface;
 public category:CategoryInterface;
 
+filterCategory(category){
+  this._uw.filtered=true;
+  this._uw.categorySelected=category.idcategory;
+  this._uw.categorySelectedName=category.name;
+  console.log("category selected:"+category.idcategory);
+}
+filterSubcategory(subcategory){
+  this._uw.filtered=true;
+  this._uw.subcategorySelected=subcategory.idsub;
+  this._uw.subcategorySelectedName=subcategory.name;
+  console.log("subcategory selected:"+subcategory.idsub);
 
+}
 
 getAllCategories(){
         this.dataApi.getAllCategories().subscribe((res:any) => {
