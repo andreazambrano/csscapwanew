@@ -23,7 +23,7 @@ export class CartComponent implements OnInit {
     public router: Router, 
     public _uw:UserWService
   	) { }
-
+     public orders:OrderInterface;
     public order : OrderInterface ={
      car:[],
       email:"",
@@ -40,10 +40,11 @@ export class CartComponent implements OnInit {
       total:0
     };
   ngOnInit() {
+    this.orders={};
     this.getOrderByNpedido(this.route.snapshot.paramMap.get('id'));
   }
   getOrderByNpedido(id: string){
-    this.dataApi.getOrderByNpedido(id).subscribe(order => (this._uw.order = order));
+    this.dataApi.getOrderByNpedido(id).subscribe((orders: OrderInterface) => (this.orders=orders));
 
   }
 }

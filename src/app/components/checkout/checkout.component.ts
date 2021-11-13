@@ -78,6 +78,7 @@ export class CheckoutComponent implements OnInit {
       this.order.npedido=npedidoString;
       this._uw.pedido.nroReserva=this.order.npedido;
       this._uw.order=this.order;
+      this._uw.order.status="new";
       this._uw.order.total=this._uw.total;
       this.orderToSend.message="Hola, hemos registrado una nueva orden de compra a nombre de: ";
       this.orderToSend.name=this.order.personaContacto;

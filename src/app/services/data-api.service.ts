@@ -23,6 +23,7 @@ export class DataApiService {
 	tix: Observable<any>;
 	sale: Observable<any>;
 	order: Observable<any>;
+	orders: Observable<any>;
 	contact: Observable<any>;
   constructor(
   	public _uw:UserWService,
@@ -107,10 +108,9 @@ sendContact(contact){
 		.pipe(map(data => data));
 	}
 	getOrderByNpedido(npedido: string){
-		const url_api = `https://db.buckapi.com:3032/api/orders/${npedido}`;
-		this.order = this.http.get(url_api);
-		return (this.order);
-
+		const url_api = `https://db.buckapi.com:3032/api/orders?filter[where][npedido]=${npedido}`;
+		this.orders = this.http.get(url_api);
+		return (this.orders);
 		// return this.http.get(url_api);
 
 		// return this.http.get(url_api);
