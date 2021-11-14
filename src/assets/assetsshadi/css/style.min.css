@@ -4267,6 +4267,8 @@ label {
 
 .footer-area .footer-center .container {
     padding: 10px 0;
+    padding-left: 5px;
+    padding-right: 5px;
     border-top: 1px solid #333;
     border-bottom: 1px solid #333
 }
@@ -4449,7 +4451,7 @@ label {
 }
 
 .footer-bottom .copy-text a {
-    color: #d62517
+    color: #fbd904
 }
 
 .footer-bottom .copy-text a:hover {
