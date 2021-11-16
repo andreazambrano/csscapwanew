@@ -18,6 +18,7 @@ import {DataApiService} from './services/data-api.service';
 import {ScrollTopService} from './services/scroll-top.service';
 import {UserWService} from './services/user-w.service';
 import {IpbucketService} from './services/ipbucket.service';
+ import {NgxPaginationModule} from 'ngx-pagination'; 
 //ANIMATIONS
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 //MATERIAL
@@ -116,6 +117,7 @@ import { GraciasComponent } from './components/gracias/gracias.component';
     CarouselModule,
     FilePickerModule,
     MatRadioModule,
+    NgxPaginationModule
   ],
   exports: [
     MatButtonModule, MatCheckboxModule, MatTabsModule,MatDialogModule,MatIconModule,MatInputModule,

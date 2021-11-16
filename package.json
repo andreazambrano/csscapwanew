@@ -38,6 +38,7 @@
     "ngx-image-uploader": "^6.0.0-beta.1",
     "ngx-moment": "^3.5.0",
     "ngx-owl-carousel-o": "^2.0.3",
+    "ngx-pagination": "^5.1.1",
     "ngx-slick-carousel": "^0.4.7",
     "nodemailer": "^6.4.3",
     "pouchdb": "^7.2.1",

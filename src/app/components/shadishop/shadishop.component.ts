@@ -6,7 +6,7 @@ import { Router } from '@angular/router';
 import { TixInterface } from '../../models/tix-interface'; 
 import { CategoryInterface } from '../../models/category-interface'; 
 import { UserWService } from "../../services/user-w.service";
-
+// import {NgxPaginationModule} from '../../../ngx-pagination'; 
 
 @Component({
   selector: 'app-shadishop',
